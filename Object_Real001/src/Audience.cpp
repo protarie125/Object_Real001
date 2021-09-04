@@ -5,7 +5,17 @@ Audience::Audience(PBag bag)
 {
 }
 
-PBag Audience::getBag() const
+long Audience::buy(PTicket ticket) const
 {
-    return bag_;
+    if (bag_->hasInvitation())
+    {
+        bag_->setTicket(ticket);
+        return 0L;
+    }
+    else
+    {
+        bag_->setTicket(ticket);
+        bag_->minusAmount(ticket->getFee());
+        return ticket->getFee();
+    }
 }
