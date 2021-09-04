@@ -2,6 +2,7 @@
 #include "sfx.h"
 
 #include "TicketOffice.h"
+#include "Audience.h"
 
 /* 판매원 */
 class TicketSeller
@@ -14,7 +15,8 @@ private:
     PTicketOffice ticketOffice_;
 
 public:
-    PTicketOffice getTicketOffice() const;
+    /* 판매원이 직접 관람객에게 티켓을 판매한다 */
+    void sellTo(PAudience audience) const;
 };
 
 using PTicketSeller = std::shared_ptr<TicketSeller>;

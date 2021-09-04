@@ -5,7 +5,18 @@ TicketSeller::TicketSeller(PTicketOffice ticketOffice)
 {
 }
 
-PTicketOffice TicketSeller::getTicketOffice() const
+void TicketSeller::sellTo(PAudience audience) const
 {
-    return ticketOffice_;
+    if (audience->getBag()->hasInvitation())
+    {
+        const auto& ticket = ticketOffice_->getTicket();
+        audience->getBag()->setTicket(ticket);
+    }
+    else
+    {
+        const auto& ticket = ticketOffice_->getTicket();
+        audience->getBag()->minusAmount(ticket->getFee());
+        ticketOffice_->plusAmount(ticket->getFee());
+        audience->getBag()->setTicket(ticket);
+    }
 }
