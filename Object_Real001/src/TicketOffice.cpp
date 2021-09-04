@@ -6,6 +6,11 @@ TicketOffice::TicketOffice(long amount, const std::list<PTicket>& tickets)
 {
 }
 
+void TicketOffice::sellTicketTo(PAudience audience)
+{
+    plusAmount(audience->buy(getTicket()));
+}
+
 PTicket TicketOffice::getTicket()
 {
     const auto& result = tickets_.front();

@@ -7,5 +7,5 @@ TicketSeller::TicketSeller(PTicketOffice ticketOffice)
 
 void TicketSeller::sellTo(PAudience audience) const
 {
-    ticketOffice_->plusAmount(audience->buy(ticketOffice_->getTicket()));
+    ticketOffice_->sellTicketTo(audience);
 }

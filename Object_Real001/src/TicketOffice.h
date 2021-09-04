@@ -3,6 +3,7 @@
 
 #include <list>
 
+#include "Audience.h"
 #include "Ticket.h"
 
 /* 매표소 */
@@ -18,6 +19,10 @@ private:
     std::list<PTicket> tickets_;
 
 public:
+    /* 관람객에게 티켓을 판매하고 금고의 금액을 증가시킨다 */
+    void sellTicketTo(PAudience audience);
+
+private:
     /* 티켓을 판매 */
     PTicket getTicket();
 
