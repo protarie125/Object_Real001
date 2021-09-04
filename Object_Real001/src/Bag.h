@@ -22,6 +22,10 @@ private:
     PTicket ticket_{ nullptr };
 
 public:
+    /* 티켓을 얻고, 지불한 비용을 반환한다. */
+    long hold(PTicket ticket);
+
+private:
     /* 초대장의 보유 여부 */
     bool hasInvitation() const;
 

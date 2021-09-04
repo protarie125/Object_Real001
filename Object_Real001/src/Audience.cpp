@@ -7,15 +7,5 @@ Audience::Audience(PBag bag)
 
 long Audience::buy(PTicket ticket) const
 {
-    if (bag_->hasInvitation())
-    {
-        bag_->setTicket(ticket);
-        return 0L;
-    }
-    else
-    {
-        bag_->setTicket(ticket);
-        bag_->minusAmount(ticket->getFee());
-        return ticket->getFee();
-    }
+    return bag_->hold(ticket);
 }
