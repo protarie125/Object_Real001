@@ -78,7 +78,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Audience.cpp" />
+    <ClCompile Include="src\Bag.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Ticket.cpp" />
+    <ClCompile Include="src\TicketOffice.cpp" />
+    <ClCompile Include="src\TicketSeller.cpp" />
+    <ClCompile Include="src\Theater.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Audience.h" />
+    <ClInclude Include="src\Bag.h" />
+    <ClInclude Include="src\sfx.h" />
+    <ClInclude Include="src\Invitation.h" />
+    <ClInclude Include="src\Ticket.h" />
+    <ClInclude Include="src\TicketOffice.h" />
+    <ClInclude Include="src\TicketSeller.h" />
+    <ClInclude Include="src\Theater.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
